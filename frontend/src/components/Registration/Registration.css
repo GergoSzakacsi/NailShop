@@ -1,0 +1,61 @@
+.registration-container {
+  background-color: #f8c5d1;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+.registration-title {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.registration-form {
+  text-align: center; /* Center-align form content */
+}
+
+.form-label {
+  color: black;
+  text-align: center; /* Align form labels to the left */
+  width: 100%; /* Make form labels full width */
+}
+
+.form-control {
+  color: black;
+  height: 48px;
+  width: 100%; /* Make form controls full width */
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.registration-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 100%; /* Make the button full width */
+}
+
+.registration-button:hover {
+  background-color: #2980b9;
+}
+
+.back-to-signin {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.back-to-signin:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+.blurred-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.blurred-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('./src/Images/Swiper/nailart3.jpg') center/cover no-repeat;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Adjust text color for better visibility on the blurred background */
+  text-align: center;
+}
+.img-fluid{
+  max-width: 30vh;
+  height: auto;
+  padding: 10px;
+  border-radius: 5%;
+}
+.desc{
+  max-width: 70vw;
+  padding: 40px;
+}

@@ -1,0 +1,96 @@
+body {
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    color: #1d2127;
+    line-height: 1.5;
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .container {
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .pricelist-table th,
+  .pricelist-table td {
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .pricelist-table th {
+    background-color: #CFA968;
+    color: #fff;
+  }
+  
+  .pricelist-table td {
+    background-color: #F4F4F4;
+  }
+  
+  .my-5 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  
+  .font-size-18 {
+    font-size: 18px;
+  }
+  
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  

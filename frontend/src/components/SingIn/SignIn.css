@@ -1,0 +1,85 @@
+.page-container {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-container {
+  background-color: #CFA968;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px; /* Add margin for larger screens */
+}
+
+.sign-in-container h2 {
+  margin-bottom: 20px;
+}
+
+.sign-in-container div {
+  margin-bottom: 15px;
+}
+
+.sign-in-container input {
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sign-in-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+  background-color: #2980b9;
+}
+
+.sign-in-container h4 {
+  margin-top: 20px;
+  color: #95a5a6;
+}
+
+.sign-in-container a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-in-container a:hover {
+  text-decoration: underline;
+}
+
+.nailart-left {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 50px;
+}
+
+.nailart-right {
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+  width: 50px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 576px) {
+  .sign-in-container {
+    margin: 30px; /* Add margin for small screens */
+  }
+}

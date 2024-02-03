@@ -1,29 +1,72 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home/Home';
+import Layout from './components/Layout/Layout';
+import Contact from './components/Contact/Contact';
+import SignIn from './components/SingIn/SignIn';
+import Registration from './components/Registration/Registration';
+import UserProfile from './components/UserProfile/UserProfile';
+import About from './components/About/About';
+import Nails from './components/Nails/nails';
+import PriceList from './components/PriceList/PriceList';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((c) => c + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
-  );
+  const [token, setToken] = useState(localStorage.getItem('token'));
+  const handleSignIn = (newToken) => {
+    setToken(newToken);
+  };
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/contact',
+          element: <Contact />,
+        },
+        {
+          path: '/profile',
+          element: <UserProfile />,
+        },
+        {
+          path: '/nails',
+          element: <Nails/>,
+        },
+        {
+          path: '/pricelist',
+          element: <PriceList/>,
+        },
+        {
+          path: '/signin',
+          element: token ? (
+            // Render the User Profile component or other authorized content here
+            <Navigate replace to="/" />
+          ) : (
+            <SignIn onSignIn={handleSignIn} />
+          ),
+        },
+        {
+          path: '/profile',
+          element: <UserProfile />,
+        },
+        {
+          path: '/registration',
+          element: <Registration />,
+        },
+        {
+          path: '/about',
+          element: <About/>,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;

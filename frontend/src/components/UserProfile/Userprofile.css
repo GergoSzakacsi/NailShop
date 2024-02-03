@@ -1,0 +1,19 @@
+.registration-container {
+    background-color: #f8c5d1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .registration-title {
+    color: #e75787;
+  }
+  
+  .registration-button {
+    background-color: #e75787;
+    color: white;
+    border: none;
+  }
+  
+  .registration-button:hover {
+    background-color: #b42d55;
+  }

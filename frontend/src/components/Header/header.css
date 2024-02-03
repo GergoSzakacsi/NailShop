@@ -1,0 +1,24 @@
+.bg-body-tertiary{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    position: sticky; 
+    top:0;
+    z-index: 9000;
+    height: 100px;
+}
+.header-booking{
+    text-align: center;
+    background-color: #F9A2A2;
+    width: 100%;
+    padding:5px
+}
+@media screen and (max-width: 768px){
+    
+}
+.navbar{
+    --bs-navbar-padding-y: 0rem;
+}
+.Container{
+    padding:0px;
+}
