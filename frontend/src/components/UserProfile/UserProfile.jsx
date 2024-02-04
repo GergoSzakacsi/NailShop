@@ -1,25 +1,23 @@
-// UserProfile.js
 import React, { useState, useEffect } from 'react';
 
 function UserProfile() {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
-    // Fetch user information from the backend when the component mounts
     fetchUserInfo();
   }, []);
 
   const fetchUserInfo = async () => {
     const token = localStorage.getItem('token');
-    console.log('Token:', token); // Check if the token is retrieved correctly
+    console.log('Token:', token);
     try {
       const response = await fetch('http://localhost:5000/user/data', {
         headers: {
-          Authorization: `${token}`, // Include 'Bearer' prefix for the token
+          Authorization: `${token}`,
         },
       });
 
-      console.log('Response Status:', response.status); // Log the response status
+      console.log('Response Status:', response.status);
 
       if (response.status === 200) {
         const data = await response.json();
@@ -33,9 +31,7 @@ function UserProfile() {
   };
 
   const handleSignOut = () => {
-    // Remove the JWT token from local storage when the user signs out
     localStorage.removeItem('token');
-    // Redirect to the sign-in page or perform other actions as needed
     window.location.href = '/';
   };
 
@@ -46,7 +42,6 @@ function UserProfile() {
         <div>
           <p>Welcome, {userInfo.name}!</p>
           <p>Email: {userInfo.email}</p>
-          {/* Add other user information */}
           <button onClick={handleSignOut}>Sign Out</button>
         </div>
       ) : (

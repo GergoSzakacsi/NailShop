@@ -1,10 +1,8 @@
-// userController.js
 import express from 'express';
 import { getUserData } from '../services/userService';
 import { authenticateUser } from '../middleware/authMiddleware'
 const router = express.Router();
 
-// Get user data route
 router.get('/data', authenticateUser, async (req, res) => {
   try {
     const userData = await getUserData(req.user.userId);

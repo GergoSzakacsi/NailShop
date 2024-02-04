@@ -1,6 +1,6 @@
 
 .background-container {
-    background-image: url('./src/Images/background.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
+    background-image: url('./src/Images/background.jpg');
     background-size: cover;
     background-position: center;
     height: 50vh;

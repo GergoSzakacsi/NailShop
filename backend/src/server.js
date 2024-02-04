@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Set up express-session
 app.use(
   session({
     secret: 'your-secret-key',
@@ -23,15 +22,12 @@ app.use(
   })
 );
 
-// Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Routes
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 
-// Ensure that you have the correct instance to call sync
 sequelize
   .sync()
   .then(() => {

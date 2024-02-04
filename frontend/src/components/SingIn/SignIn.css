@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px; /* Add margin for larger screens */
+  margin: 10px;
 }
 
 .sign-in-container h2 {
@@ -77,9 +77,8 @@
   width: 50px;
 }
 
-/* Media query for small screens */
 @media screen and (max-width: 576px) {
   .sign-in-container {
-    margin: 30px; /* Add margin for small screens */
+    margin: 30px;
   }
 }

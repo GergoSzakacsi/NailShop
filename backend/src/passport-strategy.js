@@ -1,4 +1,3 @@
-// passport-strategy.js
 import passport from 'passport';
 import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
 import User from './models/User';

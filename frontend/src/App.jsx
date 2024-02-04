@@ -45,7 +45,6 @@ function App() {
         {
           path: '/signin',
           element: token ? (
-            // Render the User Profile component or other authorized content here
             <Navigate replace to="/" />
           ) : (
             <SignIn onSignIn={handleSignIn} />

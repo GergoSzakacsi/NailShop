@@ -81,9 +81,6 @@ géllakkozás  Miskolc belvárosában.
           <SwiperSlide style={{ backgroundImage: `url(${data.path})` }} className="myswiper-slider">
             <div>
               <p>{data.desc}</p>
-              {/* <a href={`${data.url}`} target="_blank" className="slider-btn" rel="noreferrer">
-                explore
-              </a> */}
             </div>
           </SwiperSlide>
         ))}

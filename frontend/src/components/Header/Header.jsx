@@ -1,21 +1,19 @@
-// Header.js
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
+import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'; 
 import './header.css';
 
 function Header() {
   const isAuthenticated = localStorage.getItem('token');
 
   const handleLogout = () => {
-    // Implement your logout functionality, such as removing the token from localStorage
     localStorage.removeItem('token');
     window.location.href = '/';
-    // You can also perform any additional cleanup or redirection here
+    
   };
 
   return (

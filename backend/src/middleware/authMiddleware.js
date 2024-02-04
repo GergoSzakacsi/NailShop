@@ -6,7 +6,7 @@ async function authenticateToken(req, res, next) {
   if (!token) return res.status(401).json({ message: 'Access denied' });
 
   try {
-    const user = verifyToken(token); // Use the function directly
+    const user = verifyToken(token);
     console.log(user);
     req.user = user;
     next();
