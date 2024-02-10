@@ -1,10 +1,6 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'; 
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './header.css';
 
 function Header() {
@@ -13,47 +9,114 @@ function Header() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     window.location.href = '/';
-    
   };
 
   return (
-    <Navbar className="bg-body-tertiary">
-      <div className="header-booking">Foglalj időpontot most...</div>
-      <Container className='p-0' style={{height:'150px'}}>
-        <Navbar.Brand href="/">Nail Shop</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav mt-2" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="/">Főoldal</Nav.Link>
-            <Nav.Link href="/about">Rólunk</Nav.Link>
-            <Nav.Link href="/pricelist">Árlista</Nav.Link>
-            <Nav.Link href="/contact">Kapcsolat</Nav.Link>
-            {isAuthenticated ? (
-              <>
-                <NavDropdown
-                  title={
-                    <span>
-                      <FontAwesomeIcon icon={faUser} /> Profil
-                    </span>
-                  }
-                  id="basic-nav-dropdown"
+    <div className="header-container">
+      <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+        <div className="container-fluid p-0">
+          <a className="navbar-brand pl-4" href="/">
+            Nail Shop
+          </a>
+          <button
+            className="navbar-toggler ppr/4 bg-light mr-4 mt-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse pr-5 mb-2" id="navbarNavDropdown">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Főoldal
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/about">
+                  Rólunk
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/pricelist">
+                  Árlista
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/contact">
+                  Kapcsolat
+                </a>
+              </li>
+              {isAuthenticated ? (
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <FontAwesomeIcon icon={faUser} /> Profil
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                      <a className="dropdown-item" href="/profile">
+                        My Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" onClick={handleLogout} href="#">
+                        Logout
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <a className="nav-link" href="/signin">
+                    Bejelentkezés
+                  </a>
+                </li>
+              )}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>
-                  <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
-                </NavDropdown>
-              </>
-            ) : (
-              <Nav.Link href="/signin">Bejelentkezés</Nav.Link>
-            )}
-            <NavDropdown title="Szolgáltatásaink" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/nails">Műköröm</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Saját köröm megerősítése</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Gellac</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+                  Szolgáltatásaink
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a className="dropdown-item" href="/nails">
+                      Műköröm
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#action/3.2">
+                      Saját köröm megerősítése
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#action/3.3">
+                      Gellac
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   );
 }
 

@@ -30,7 +30,7 @@ const Pricelist = () => {
     </div>
   </div>
 
-<div className="row justify-content-center w-100">
+<div className="row justify-content-center">
     <div className="col-12 col-md-12">
       <div className="text-center">
         <table className="table pricelist-table w-100">
@@ -99,7 +99,7 @@ const Pricelist = () => {
         </div>
       </div>
 
-<div className="row justify-content-center w-100">
+<div className="row justify-content-center">
     <div className="col-12 col-md-12">
       <div className="text-center">
         <table className="table pricelist-table w-100">

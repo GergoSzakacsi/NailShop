@@ -1,27 +1,29 @@
-
 .background-container {
-    background-image: url('./src/Images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .content-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    width:1500px;
-    border-radius: 10px;
-    padding: 40px 70px;
-    text-align: center;
-    font-size: 14px;
-  }
-  .btn{
-    width:400px
-  }
-  .img{
-    object-fit: cover;
-    width: 100%;
-    max-height: 410px;
-  }
+  background-image: url('./src/Images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh; /* Changed height to min-height for responsiveness */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 90%; /* Changed width to max-width for responsiveness */
+  border-radius: 10px;
+  padding: 40px; /* Changed padding for responsiveness */
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%; /* Changed width to 100% for responsiveness */
+  max-width: 400px; /* Added max-width for larger screens */
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 410px;
+}
