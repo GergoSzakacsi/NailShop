@@ -28,7 +28,7 @@ function Contact() {
       <div className="row">
         <div className="col-md-12 col-lg-6 mb-4 mb-lg-0">
           <form onSubmit={handleSubmit} className="contact-form">
-            <h2 className="text-center mb-4">Contact Us</h2>
+            <h2 className="text-center mb-4">Kapcsolat</h2>
             <div className="form-group">
               <label htmlFor="name" className="form-label">
                 Név

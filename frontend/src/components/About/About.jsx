@@ -41,7 +41,7 @@ const About = () => {
                   <img
                     src="./src/Images/Swiper/nailart3.jpg"
                     alt="Description of your image"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: '90vw', height: 'auto' }}
                   />
                 </span>
               </figure>
